@@ -1,5 +1,8 @@
-import { Avatar, AvatarImage } from "@radix-ui/react-avatar";
-import { Badge } from "lucide-react";
+"use client";
+
+import { Prisma } from "@prisma/client";
+import { Avatar, AvatarImage } from "./avatar";
+import { Badge } from "./badge";
 import { Card, CardContent } from "./card";
 
 // TO-DO: receber agendamento como prop
