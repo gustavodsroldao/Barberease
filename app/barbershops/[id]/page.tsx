@@ -1,6 +1,6 @@
 import { Button } from "@/app/_components/ui/button";
-import PhoneItem from "@/app/_components/ui/phone-item";
-import ServiceItem from "@/app/_components/ui/service-item";
+import PhoneItem from "@/app/_components/phone-item";
+import ServiceItem from "@/app/_components/service-item";
 import { db } from "@/app/_lib/prisma";
 import {
   ChevronLeftIcon,
@@ -13,6 +13,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import SidebarSheet from "@/app/_components/sidebar-sheet";
+import { Sheet, SheetTrigger } from "@/app/_components/ui/sheet";
 
 interface BarbershopPageProps {
   params: {
@@ -59,13 +61,18 @@ const BarbershopPage = async ({ params }: BarbershopPageProps) => {
           </Link>
         </Button>
 
-        <Button
-          size="icon"
-          variant="secondary"
-          className="absolute top-4 right-4"
-        >
-          <MenuIcon />
-        </Button>
+        <Sheet>
+          <SheetTrigger>
+            <Button
+              size="icon"
+              variant="outline"
+              className="absolute right-4 top-4"
+            >
+              <MenuIcon />
+            </Button>
+          </SheetTrigger>
+          <SidebarSheet />
+        </Sheet>
       </div>
 
       {/* TITULO */}
