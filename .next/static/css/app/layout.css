@@ -653,6 +653,9 @@ video {
 .left-4 {
   left: 1rem;
 }
+.left-\[50\%\] {
+  left: 50%;
+}
 .right-0 {
   right: 0px;
 }
@@ -667,9 +670,6 @@ video {
 }
 .top-4 {
   top: 1rem;
-}
-.left-\[50\%\] {
-  left: 50%;
 }
 .top-\[50\%\] {
   top: 50%;
@@ -746,17 +746,14 @@ video {
 .w-6 {
   width: 1.5rem;
 }
+.w-\[90\%\] {
+  width: 90%;
+}
 .w-fit {
   width: fit-content;
 }
 .w-full {
   width: 100%;
-}
-.w-2 {
-  width: 0.5rem;
-}
-.w-\[90\%\] {
-  width: 90%;
 }
 .min-w-\[110px\] {
   min-width: 110px;
@@ -802,6 +799,9 @@ video {
 .justify-between {
   justify-content: space-between;
 }
+.gap-1 {
+  gap: 0.25rem;
+}
 .gap-2 {
   gap: 0.5rem;
 }
@@ -810,9 +810,6 @@ video {
 }
 .gap-4 {
   gap: 1rem;
-}
-.gap-1 {
-  gap: 0.25rem;
 }
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -1302,13 +1299,13 @@ video {
 }
 
 
-.data-\[state\=open\]\:bg-secondary[data-state=open] {
-  background-color: hsl(var(--secondary));
+.data-\[state\=open\]\:bg-accent[data-state=open] {
+  background-color: hsl(var(--accent));
 }
 
 
-.data-\[state\=open\]\:bg-accent[data-state=open] {
-  background-color: hsl(var(--accent));
+.data-\[state\=open\]\:bg-secondary[data-state=open] {
+  background-color: hsl(var(--secondary));
 }
 
 
@@ -1379,6 +1376,11 @@ video {
 }
 
 
+.data-\[state\=closed\]\:slide-out-to-left-1\/2[data-state=closed] {
+  --tw-exit-translate-x: -50%;
+}
+
+
 .data-\[state\=closed\]\:slide-out-to-right[data-state=closed] {
   --tw-exit-translate-x: 100%;
 }
@@ -1386,6 +1388,11 @@ video {
 
 .data-\[state\=closed\]\:slide-out-to-top[data-state=closed] {
   --tw-exit-translate-y: -100%;
+}
+
+
+.data-\[state\=closed\]\:slide-out-to-top-\[48\%\][data-state=closed] {
+  --tw-exit-translate-y: -48%;
 }
 
 
@@ -1399,6 +1406,11 @@ video {
 }
 
 
+.data-\[state\=open\]\:slide-in-from-left-1\/2[data-state=open] {
+  --tw-enter-translate-x: -50%;
+}
+
+
 .data-\[state\=open\]\:slide-in-from-right[data-state=open] {
   --tw-enter-translate-x: 100%;
 }
@@ -1406,21 +1418,6 @@ video {
 
 .data-\[state\=open\]\:slide-in-from-top[data-state=open] {
   --tw-enter-translate-y: -100%;
-}
-
-
-.data-\[state\=closed\]\:slide-out-to-left-1\/2[data-state=closed] {
-  --tw-exit-translate-x: -50%;
-}
-
-
-.data-\[state\=closed\]\:slide-out-to-top-\[48\%\][data-state=closed] {
-  --tw-exit-translate-y: -48%;
-}
-
-
-.data-\[state\=open\]\:slide-in-from-left-1\/2[data-state=open] {
-  --tw-enter-translate-x: -50%;
 }
 
 
