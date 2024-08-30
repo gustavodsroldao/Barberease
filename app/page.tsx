@@ -1,5 +1,5 @@
 import { Button } from "./_components/ui/button";
-import Header from "./_components/ui/header";
+import Header from "./_components/header";
 import { Input } from "./_components/ui/input";
 import Image from "next/image";
 import { Card, CardContent } from "./_components/ui/card";
