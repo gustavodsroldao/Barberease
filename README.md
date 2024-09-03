@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Barberease - Sistema de Gestão para Barbearias**
 
-## Getting Started
+**Barberease** é um sistema desenvolvido para otimizar a gestão de barbearias, proporcionando uma maneira prática de gerenciar agendamentos, perfis de clientes, serviços, e o dia a dia das operações. Esta aplicação visa facilitar a administração do negócio, melhorando a eficiência e a experiência do cliente.
 
-First, run the development server:
+## 📋 **Recursos Principais**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Gestão de Agendamentos**: Sistema completo de agendamentos com opções de reagendamento e cancelamento.
+- **Cadastro de Clientes**: Gerenciamento de informações dos clientes, como dados pessoais e histórico de serviços.
+- **Gestão de Serviços**: Adição, edição e exclusão de serviços oferecidos pela barbearia.
+- **Painel Administrativo**: Interface amigável para visualização de dados como volume de clientes e serviços mais populares.
+- **Notificações**: Lembretes automáticos de compromissos para clientes e barbearia.
+- **Relatórios**: Geração de relatórios para análise de desempenho e tomada de decisões estratégicas.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 **Tecnologias Utilizadas**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **React**: Utilizado para o desenvolvimento da interface do usuário, garantindo uma experiência fluida e responsiva.
+- **TypeScript**: Para tipagem estática e maior segurança do código.
+- **PostgreSQL**: Banco de dados relacional robusto para armazenar dados de forma eficiente.
+- **Tailwind CSS**: Framework utilitário para criar designs customizados rapidamente.
+- **Next.js**: Para renderização do lado do servidor e geração de páginas estáticas, melhorando a performance e o SEO.
+- **ShadCN**: Ferramenta para construção de componentes de UI complexos integrados com Tailwind CSS.
+- **Node.js**: Utilizado no backend para construir APIs RESTful e manuseio de dados.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- -------
+soon
