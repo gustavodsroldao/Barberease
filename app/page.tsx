@@ -8,6 +8,8 @@ import BarbershopItem from "./_components/ui/barbershop-item";
 import { SearchIcon } from "lucide-react";
 import { quickSearchOptions } from "@/constants/search";
 import BookingItem from "./_components/ui/booking-item";
+import Search from "./_components/search";
+import Link from "next/link";
 
 const Home = async () => {
   // chamar banco de dados
@@ -24,23 +26,24 @@ const Home = async () => {
       <div className="p-5">
         <h2 className="text-xl font-bold">Olá, Gustavo!</h2>
         <p>Segunda-Feira, 19 de agosto.</p>
+
         {/* BUSCA */}
-        <div className="flex items-center gap-2 mt-6">
-          <Input placeholder="Faça sua busca..." />
-          <Button>
-            <SearchIcon />
-          </Button>
+        <div className="mt-6">
+          <Search />
         </div>
+
         {/* BUSCA RAPIDA */}
         <div className="flex gap-3 mt-6 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
           {quickSearchOptions.map((option) => (
             <Button className="gap-2" variant="secondary" key={option.title}>
-              <Image
-                src={option.imageUrl}
-                width={16}
-                height={16}
-                alt={option.title}
-              />
+              <Link href={`/barbershops?service=${option.title}`}>
+                <Image
+                  src={option.imageUrl}
+                  width={16}
+                  height={16}
+                  alt={option.title}
+                />
+              </Link>
               {option.title}
             </Button>
           ))}
