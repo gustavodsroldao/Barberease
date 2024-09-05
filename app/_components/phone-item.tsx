@@ -21,6 +21,7 @@ const PhoneItem = ({ phone }: PhoneItemProps) => {
         <SmartphoneIcon />
         <p className="text-sm">{phone}</p>
       </div>
+
       {/* DIREITA */}
       <Button
         variant="outline"

@@ -1,6 +1,5 @@
 "use client";
 
-import { Prisma } from "@prisma/client";
 import { Avatar, AvatarImage } from "./ui/avatar";
 import { Badge } from "./ui/badge";
 import { Card, CardContent } from "./ui/card";
@@ -21,7 +20,7 @@ const BookingItem = () => {
 
             <div className="flex items-center gap-2">
               <Avatar className="h-6 w-6">
-                <AvatarImage src="https://utfs.io/f/c97a2dc9-cf62-468b-a851-bfd2bdde775f-16p.png" />
+                <AvatarImage src="https://media.discordapp.net/attachments/929554560987566101/1281007781675270217/bbb.png?ex=66da26f7&is=66d8d577&hm=ed2a2f6b429b326abc83e0302909e2ead326a0f8ca65e8e9d5d5896bfae8079e&=&format=webp&quality=lossless&width=466&height=350" />
               </Avatar>
               <p className="text-sm">Barbearia do Bruno</p>
             </div>

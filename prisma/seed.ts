@@ -8,7 +8,7 @@ async function seedDatabase() {
       "https://utfs.io/f/c97a2dc9-cf62-468b-a851-bfd2bdde775f-16p.png",
       "https://utfs.io/f/45331760-899c-4b4b-910e-e00babb6ed81-16q.png",
       "https://utfs.io/f/5832df58-cfd7-4b3f-b102-42b7e150ced2-16r.png",
-      "https://utfs.io/f/7e309eaa-d722-465b-b8b6-76217404a3d3-16s.png",
+      "https://utfs.io/f/bb2e8a5f-21fa-438c-9760-23bcdef3f7b2-2336.png",
       "https://utfs.io/f/178da6b6-6f9a-424a-be9d-a2feb476eb36-16t.png",
       "https://utfs.io/f/2f9278ba-3975-4026-af46-64af78864494-16u.png",
       "https://utfs.io/f/988646ea-dcb6-4f47-8a03-8d4586b7bc21-16v.png",
@@ -31,7 +31,7 @@ async function seedDatabase() {
     const creativeNames = [
       "Barbearia Vintage",
       "Corte & Estilo",
-      "Barba & Navalha",
+      "Barbearia do Bruno",
       "The Dapper Den",
       "Cabelo & Cia.",
       "Machado & Tesoura",
@@ -59,7 +59,7 @@ async function seedDatabase() {
       {
         name: "Corte de Cabelo",
         description: "Estilo personalizado com as últimas tendências.",
-        price: 60.0,
+        price: 35.0,
         imageUrl:
           "https://utfs.io/f/0ddfbd26-a424-43a0-aaf3-c3f1dc6be6d1-1kgxo7.png",
       },
@@ -73,7 +73,7 @@ async function seedDatabase() {
       {
         name: "Pézinho",
         description: "Acabamento perfeito para um visual renovado.",
-        price: 35.0,
+        price: 25.0,
         imageUrl:
           "https://utfs.io/f/8a457cda-f768-411d-a737-cdb23ca6b9b5-b3pegf.png",
       },
@@ -112,7 +112,7 @@ async function seedDatabase() {
           name,
           address,
           imageUrl: imageUrl,
-          phones: ["(11) 99999-9999", "(11) 99999-9999"],
+          phones: ["(11) 99999-9999", "(55) 99999-9999"],
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac augue ullamcorper, pharetra orci mollis, auctor tellus. Phasellus pharetra erat ac libero efficitur tempus. Donec pretium convallis iaculis. Etiam eu felis sollicitudin, cursus mi vitae, iaculis magna. Nam non erat neque. In hac habitasse platea dictumst. Pellentesque molestie accumsan tellus id laoreet.",
         },

@@ -1,15 +1,12 @@
 import { Button } from "./_components/ui/button";
 import Header from "./_components/header";
-import { Input } from "./_components/ui/input";
 import Image from "next/image";
-import { Card, CardContent } from "./_components/ui/card";
 import { db } from "./_lib/prisma";
 import BarbershopItem from "./_components/ui/barbershop-item";
-import { SearchIcon } from "lucide-react";
 import { quickSearchOptions } from "@/constants/search";
-import BookingItem from "./_components/ui/booking-item";
+import BookingItem from "./_components/booking-item";
 import Search from "./_components/search";
-import Link from "next/link";
+import Link from "next/dist/client/link";
 
 const Home = async () => {
   // chamar banco de dados
@@ -35,17 +32,17 @@ const Home = async () => {
         {/* BUSCA RAPIDA */}
         <div className="flex gap-3 mt-6 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
           {quickSearchOptions.map((option) => (
-            <Button className="gap-2" variant="secondary" key={option.title}>
-              <Link href={`/barbershops?service=${option.title}`}>
+            <Link href={`/barbershops?service=${option.title}`}>
+              <Button className="gap-2" variant="secondary" key={option.title}>
                 <Image
                   src={option.imageUrl}
                   width={16}
                   height={16}
                   alt={option.title}
                 />
-              </Link>
-              {option.title}
-            </Button>
+                {option.title}
+              </Button>
+            </Link>
           ))}
         </div>
         {/* IMAGEM */}
