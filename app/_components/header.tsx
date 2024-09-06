@@ -13,6 +13,7 @@ const Header = () => {
         <Link href="/">
           <Image alt="Barberease" src="/logo.png" height={18} width={120} />
         </Link>
+
         <Sheet>
           <SheetTrigger>
             <Button size="icon" variant="outline">
@@ -25,4 +26,5 @@ const Header = () => {
     </Card>
   );
 };
+
 export default Header;

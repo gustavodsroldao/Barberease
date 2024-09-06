@@ -14,7 +14,7 @@ import {
 } from "./ui/sheet";
 import { Calendar } from "./ui/calendar";
 import { ptBR } from "date-fns/locale";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { format, set, setMinutes } from "date-fns";
 import { createBooking } from "./_actions/create-booking";
 import { useSession } from "next-auth/react";
@@ -55,6 +55,14 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
   const [selectedTime, setSelectedTime] = useState<string | undefined>(
     undefined,
   );
+  const [dayBooking, setDayBookings] = useState();
+
+  useEffect(() => {
+    const fetch = async () => {
+      await getBookings();
+    };
+  }, []);
+
   console.log({ data });
 
   const handleDateSelected = (date: Date | undefined) => {

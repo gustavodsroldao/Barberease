@@ -20,7 +20,7 @@ const BookingItem = () => {
 
             <div className="flex items-center gap-2">
               <Avatar className="h-6 w-6">
-                <AvatarImage src="https://media.discordapp.net/attachments/929554560987566101/1281007781675270217/bbb.png?ex=66da26f7&is=66d8d577&hm=ed2a2f6b429b326abc83e0302909e2ead326a0f8ca65e8e9d5d5896bfae8079e&=&format=webp&quality=lossless&width=466&height=350" />
+                <AvatarImage src="https://utfs.io/f/bb2e8a5f-21fa-438c-9760-23bcdef3f7b2-2336.png" />
               </Avatar>
               <p className="text-sm">Barbearia do Bruno</p>
             </div>
