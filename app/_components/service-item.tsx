@@ -6,17 +6,15 @@ import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetFooter,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
 } from "./ui/sheet";
 import { Calendar } from "./ui/calendar";
 import { ptBR } from "date-fns/locale";
 import { useEffect, useState } from "react";
-import { format, getTime, set, setMinutes } from "date-fns";
+import { addDays, format, set } from "date-fns";
 import { createBooking } from "./_actions/create-booking";
 import { useSession } from "next-auth/react";
 import { toast } from "sonner";
@@ -75,6 +73,8 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
   );
   const [dayBookings, setDayBookings] = useState<Booking[]>([]);
 
+  const [bookingSheetIsOpen, setBookingSheetIsOpen] = useState(false);
+
   useEffect(() => {
     if (!selectedDay) return;
     const fetch = async () => {
@@ -86,6 +86,13 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
     };
     fetch();
   }, [selectedDay, service.id]);
+
+  const handleBookingSheetOpenChange = () => {
+    setSelectedDay(undefined);
+    setSelectedTime(undefined);
+    setDayBookings([]);
+    setBookingSheetIsOpen(false);
+  };
 
   const handleDateSelected = (date: Date | undefined) => {
     setSelectedDay(date);
@@ -111,6 +118,7 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
         userId: (data?.user as any).id,
         date: newDate,
       });
+      handleBookingSheetOpenChange();
       toast.success("Reserva criada com sucesso!");
     } catch (error) {
       console.error(error);
@@ -144,12 +152,18 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
               }).format(Number(service.price))}
             </p>
 
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="secondary" size="sm">
-                  Reservar
-                </Button>
-              </SheetTrigger>
+            <Sheet
+              open={bookingSheetIsOpen}
+              onOpenChange={handleBookingSheetOpenChange}
+            >
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() => setBookingSheetIsOpen(true)}
+              >
+                Reservar
+              </Button>
+
               <SheetContent className="px-0">
                 <SheetHeader>
                   <SheetTitle>Fazer Reserva</SheetTitle>
@@ -161,6 +175,7 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
                     locale={ptBR}
                     selected={selectedDay}
                     onSelect={handleDateSelected}
+                    fromDate={addDays(new Date(), 1)}
                     styles={{
                       head_cell: {
                         width: "100%",
@@ -239,14 +254,12 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
                   </div>
                 )}
                 <SheetFooter className="px-5 mt-5">
-                  <SheetClose asChild>
-                    <Button
-                      onClick={handleCreateBooking}
-                      disabled={!selectedDay || !selectedTime}
-                    >
-                      Confirmar
-                    </Button>
-                  </SheetClose>
+                  <Button
+                    onClick={handleCreateBooking}
+                    disabled={!selectedDay || !selectedTime}
+                  >
+                    Confirmar
+                  </Button>
                 </SheetFooter>
               </SheetContent>
             </Sheet>
