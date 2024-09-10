@@ -1,5 +1,6 @@
 "use client";
-import { Barbershop, BarbershopService } from "@prisma/client";
+
+import { Barbershop, BarbershopService, Booking } from "@prisma/client";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
@@ -15,10 +16,11 @@ import {
 import { Calendar } from "./ui/calendar";
 import { ptBR } from "date-fns/locale";
 import { useEffect, useState } from "react";
-import { format, set, setMinutes } from "date-fns";
+import { format, getTime, set, setMinutes } from "date-fns";
 import { createBooking } from "./_actions/create-booking";
 import { useSession } from "next-auth/react";
 import { toast } from "sonner";
+import { getBookings } from "./_actions/get-booking";
 
 interface ServiceItemProps {
   service: BarbershopService;
@@ -49,21 +51,41 @@ const TIME_LIST = [
   "18:00",
 ];
 
+const getTimeList = (bookings: Booking[]) => {
+  return TIME_LIST.filter((time) => {
+    const hour = Number(time.split(":")[0]);
+    const minutes = Number(time.split(":")[1]);
+
+    const hasBookingOnCurrentTime = bookings.some(
+      (booking) =>
+        booking.date.getHours() === hour &&
+        booking.date.getMinutes() === minutes,
+    );
+    if (hasBookingOnCurrentTime) {
+      return false;
+    }
+    return true;
+  });
+};
 const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
   const { data } = useSession();
   const [selectedDay, setSelectedDay] = useState<Date | undefined>(undefined);
   const [selectedTime, setSelectedTime] = useState<string | undefined>(
     undefined,
   );
-  const [dayBooking, setDayBookings] = useState();
+  const [dayBookings, setDayBookings] = useState<Booking[]>([]);
 
   useEffect(() => {
+    if (!selectedDay) return;
     const fetch = async () => {
-      await getBookings();
+      const bookings = await getBookings({
+        date: selectedDay,
+        serviceId: service.id,
+      });
+      setDayBookings(bookings);
     };
-  }, []);
-
-  console.log({ data });
+    fetch();
+  }, [selectedDay, service.id]);
 
   const handleDateSelected = (date: Date | undefined) => {
     setSelectedDay(date);
@@ -167,7 +189,7 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
 
                 {selectedDay && (
                   <div className="p-5 flex border-b border-solid overflow-x-auto gap-3 [&::-webkit-scrollbar]:hidden">
-                    {TIME_LIST.map((time) => (
+                    {getTimeList(dayBookings).map((time) => (
                       <Button
                         key={time}
                         variant={selectedTime == time ? "default" : "outline"}

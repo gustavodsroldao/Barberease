@@ -1,3 +1,5 @@
+"use server";
+
 import { db } from "@/app/_lib/prisma";
 import { endOfDay, startOfDay } from "date-fns";
 
