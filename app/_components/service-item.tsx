@@ -53,6 +53,7 @@ const TIME_LIST = [
 ];
 
 const getTimeList = (bookings: Booking[]) => {
+  // TODO: Não exibir horários em que já passaram/no passado
   return TIME_LIST.filter((time) => {
     const hour = Number(time.split(":")[0]);
     const minutes = Number(time.split(":")[1]);
