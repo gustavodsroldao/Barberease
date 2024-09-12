@@ -1,5 +1,6 @@
 {
   "*.ts?(x)": ["eslint --fix", "prettier --write"],
   "!node_modules/**": ["prettier --write"],
-  "!*.prettierignore": []
+  "!*.prettierignore": [],
+  "*.{js,ts,tsx}": ["eslint --fix", "prettier --write"]
 }

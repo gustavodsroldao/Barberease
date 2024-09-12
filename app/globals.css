@@ -36,7 +36,6 @@
   }
 }
 
-
 @layer base {
   * {
     @apply border-border antialiased;
@@ -45,7 +44,7 @@
     @apply h-full;
   }
   html {
-    @apply h-full; 
+    @apply h-full;
   }
   body {
     @apply h-full bg-background text-foreground h-full;

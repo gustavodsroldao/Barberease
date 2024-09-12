@@ -21,5 +21,6 @@
 - **ShadCN**: Ferramenta para construção de componentes de UI complexos integrados com Tailwind CSS.
 - **Node.js**: Utilizado no backend para construir APIs RESTful e manuseio de dados.
 
-- -------
+---
+
 soon
