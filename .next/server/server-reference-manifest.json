@@ -1,5 +1,58 @@
 {
-  "node": {},
+  "node": {
+    "0ee16e7c04321cb06572e1a2d0d4114093a4d4b3": {
+      "workers": {
+        "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Cdelete-booking.ts%22%2C%5B%22%24%24ACTION_0%22%2C%22deleteBooking%22%5D%5D%5D&__client_imported__=true!",
+        "app/bookings/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Cdelete-booking.ts%22%2C%5B%22%24%24ACTION_0%22%2C%22deleteBooking%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/page": "action-browser",
+        "app/bookings/page": "action-browser"
+      }
+    },
+    "bfb5972d5f6c707fb2a7505fdb6f81fb90011fc4": {
+      "workers": {
+        "app/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Cdelete-booking.ts%22%2C%5B%22%24%24ACTION_0%22%2C%22deleteBooking%22%5D%5D%5D&__client_imported__=true!",
+        "app/bookings/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Cdelete-booking.ts%22%2C%5B%22%24%24ACTION_0%22%2C%22deleteBooking%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/page": "action-browser",
+        "app/bookings/page": "action-browser"
+      }
+    },
+    "1858bf996a502cd2297cdcedc9ce0e8741d028f4": {
+      "workers": {
+        "app/barbershops/[id]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Ccreate-booking.ts%22%2C%5B%22createBooking%22%2C%22%24%24ACTION_0%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Cget-booking.ts%22%2C%5B%22%24%24ACTION_0%22%2C%22getBookings%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/barbershops/[id]/page": "action-browser"
+      }
+    },
+    "9630b8f847008cc1873327dbeebd50c71467bbd7": {
+      "workers": {
+        "app/barbershops/[id]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Ccreate-booking.ts%22%2C%5B%22createBooking%22%2C%22%24%24ACTION_0%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Cget-booking.ts%22%2C%5B%22%24%24ACTION_0%22%2C%22getBookings%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/barbershops/[id]/page": "action-browser"
+      }
+    },
+    "d07acf5e43e9ce9ec9ebe0b0dea8ea68191b2c26": {
+      "workers": {
+        "app/barbershops/[id]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Ccreate-booking.ts%22%2C%5B%22createBooking%22%2C%22%24%24ACTION_0%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Cget-booking.ts%22%2C%5B%22%24%24ACTION_0%22%2C%22getBookings%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/barbershops/[id]/page": "action-browser"
+      }
+    },
+    "e880337d28f53c6aa74684b8f017a4ccacdf2d44": {
+      "workers": {
+        "app/barbershops/[id]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Ccreate-booking.ts%22%2C%5B%22createBooking%22%2C%22%24%24ACTION_0%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Cgvsta%5C%5CDocuments%5C%5Ccoding%5C%5Cprojects%5C%5CBarbearia%5C%5Capp%5C%5C_components%5C%5C_actions%5C%5Cget-booking.ts%22%2C%5B%22%24%24ACTION_0%22%2C%22getBookings%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/barbershops/[id]/page": "action-browser"
+      }
+    }
+  },
   "edge": {},
-  "encryptionKey": "skFwsJfBTRZqbVukPWk2X7ETr2FhIg6tWMTWJBctE40="
+  "encryptionKey": "7VcwVJnVceAUilQ57R9hb24oBh7zV/6SnqyAH44z27E="
 }

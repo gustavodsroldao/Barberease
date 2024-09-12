@@ -4,6 +4,7 @@ import { db } from "../_lib/prisma";
 import { authOptions } from "../_lib/auth";
 import { notFound } from "next/navigation";
 import BookingItem from "../_components/booking-item";
+import { is } from "date-fns/locale";
 
 const Bookings = async () => {
   const session = await getServerSession(authOptions);
@@ -64,21 +65,26 @@ const Bookings = async () => {
       <Header />
       <div className="p-5 space-y-3">
         <h1 className="text-xl font-bold">Agendamentos</h1>
-
-        <h2 className=" mb-3 uppercase text-gray-400 font-bold text-xs mt-6">
-          Confirmados
-        </h2>
-        <div>
-          {confirmedBookings.map((booking) => (
-            <BookingItem key={booking.id} booking={booking} />
-          ))}
-          <h2 className=" mb-3 uppercase text-gray-400 font-bold text-xs mt-6">
-            Finalizados
-          </h2>
-          {concludedBookings.map((booking) => (
-            <BookingItem key={booking.id} booking={booking} />
-          ))}
-        </div>
+        {confirmedBookings.length > 0 && (
+          <>
+            <h2 className=" mb-3 uppercase text-gray-400 font-bold text-xs mt-6">
+              Confirmados
+            </h2>
+            {confirmedBookings.map((booking) => (
+              <BookingItem key={booking.id} booking={booking} />
+            ))}
+          </>
+        )}
+        {concludedBookings.length > 0 && (
+          <>
+            <h2 className=" mb-3 uppercase text-gray-400 font-bold text-xs mt-6">
+              Finalizados
+            </h2>
+            {concludedBookings.map((booking) => (
+              <BookingItem key={booking.id} booking={booking} />
+            ))}
+          </>
+        )}
       </div>
     </>
   );
