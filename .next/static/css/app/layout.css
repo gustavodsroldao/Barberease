@@ -790,6 +790,9 @@ video {
 .w-9 {
   width: 2.25rem;
 }
+.w-\[85\%\] {
+  width: 85%;
+}
 .w-\[90\%\] {
   width: 90%;
 }
@@ -798,9 +801,6 @@ video {
 }
 .w-full {
   width: 100%;
-}
-.w-\[85\%\] {
-  width: 85%;
 }
 .min-w-\[110px\] {
   min-width: 110px;
@@ -1613,10 +1613,6 @@ video {
 
 
 @media (min-width: 640px) {
-
-  .sm\:mt-0 {
-    margin-top: 0px;
-  }
 
   .sm\:max-w-sm {
     max-width: 24rem;
