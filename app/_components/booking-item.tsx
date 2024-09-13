@@ -32,7 +32,6 @@ import { DialogClose } from "@radix-ui/react-dialog";
 import { deleteBooking } from "./_actions/delete-booking";
 import { toast } from "sonner";
 import { useState } from "react";
-import { error } from "console";
 import BookingSumary from "./booking-sumary";
 
 interface BookingItemProps {
@@ -80,7 +79,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
               >
                 {isConfirmed ? "Confirmado" : "Finalizado"}
               </Badge>
-              <h3 className="font-semibold">{booking.service.name}</h3>
+              <h3 className="font-semibold -ml-16">{booking.service.name}</h3>
 
               <div className="flex items-center gap-2">
                 <Avatar className="h-6 w-6">

@@ -29,7 +29,7 @@ const Home = async () => {
     <div>
       <Header />
       <div className="p-5">
-        <h2 className="text-xl font-bold">
+        <h2 className="text-xl">
           Olá, {session?.user ? session.user.name : "bem-vindo"}!
         </h2>
         <p>

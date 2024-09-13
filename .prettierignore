@@ -1,2 +1,4 @@
 .prettierignore
 node_modules
+public/*.png
+public/*.jpg
