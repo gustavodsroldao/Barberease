@@ -1,14 +1,14 @@
 {
-  "name": "barberease",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "fsw-barber",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install && generate"
+    "prepare": "husky install && prisma generate"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
@@ -16,13 +16,11 @@
   "dependencies": {
     "@auth/prisma-adapter": "^2.4.2",
     "@hookform/resolvers": "^3.9.0",
-    "@radix-ui/react-alert-dialog": "^1.1.1",
+    "@prisma/client": "^5.17.0",
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-slot": "^1.1.0",
-    "@typescript-eslint/eslint-plugin": "^8.1.0",
-    "@typescript-eslint/parser": "^8.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
@@ -33,35 +31,32 @@
     "react": "^18",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18",
-    "react-hook-form": "^7.53.0",
+    "react-hook-form": "^7.52.2",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@prisma/client": "^5.19.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
     "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.5",
+    "eslint-config-next": "14.2.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "git-commit-msg-linter": "^5.0.8",
-    "husky": "^9.1.1",
+    "husky": "^8.0.0",
     "lint-staged": "^15.2.7",
-    "postcss": "^8",
+    "postcss": "^8.4.22",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
-    "prisma": "^5.19.1",
+    "prisma": "^5.17.0",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{png,jpg,jpeg,gif,svg}": "echo 'Skipping image files'"
+    "typescript": "^5.0.4"
   }
 }
