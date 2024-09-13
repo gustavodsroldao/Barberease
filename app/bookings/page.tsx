@@ -5,6 +5,8 @@ import { authOptions } from "../_lib/auth";
 import { notFound } from "next/navigation";
 import BookingItem from "../_components/booking-item";
 import { is } from "date-fns/locale";
+import { getConfirmedBookings } from "../_data/get-confirmed-bookings";
+import { getConcludedBookings } from "../_data/get-concluded-bookings";
 
 const Bookings = async () => {
   const session = await getServerSession(authOptions);
@@ -12,53 +14,10 @@ const Bookings = async () => {
     //TODO: Mostrar popup de login
     return notFound();
   }
-  const bookings = await db.booking.findMany({
-    where: {
-      userId: (session.user as any).id,
-    },
-    include: {
-      service: {
-        include: {
-          barbershop: true,
-        },
-      },
-    },
-  });
 
-  const confirmedBookings = await db.booking.findMany({
-    where: {
-      userId: (session.user as any).id,
-      date: {
-        gte: new Date(),
-      },
-    },
-    include: {
-      service: {
-        include: {
-          barbershop: true,
-        },
-      },
-    },
-  });
+  const confirmedBookings = await getConfirmedBookings();
 
-  const concludedBookings = await db.booking.findMany({
-    where: {
-      userId: (session.user as any).id,
-      date: {
-        lt: new Date(),
-      },
-    },
-    include: {
-      service: {
-        include: {
-          barbershop: true,
-        },
-      },
-    },
-    orderBy: {
-      date: "asc",
-    },
-  });
+  const concludedBookings = await getConcludedBookings();
 
   return (
     <>
