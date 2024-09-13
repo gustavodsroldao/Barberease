@@ -1,26 +1,46 @@
-# **Barberease - Sistema de Gestão para Barbearias**
+# **Barberease** 💈 - Sistema de Agendamento para Barbearias
 
-**Barberease** é um sistema desenvolvido para otimizar a gestão de barbearias, proporcionando uma maneira prática de gerenciar agendamentos, perfis de clientes, serviços, e o dia a dia das operações. Esta aplicação visa facilitar a administração do negócio, melhorando a eficiência e a experiência do cliente.
+**Barberease** é um sistema completo de gerenciamento de agendamentos e serviços para barbearias, projetado para otimizar a organização de horários e melhorar a experiência do cliente. Com uma interface simples e intuitiva, o Barberease oferece todas as ferramentas necessárias para um gerenciamento eficiente.
 
-## 📋 **Recursos Principais**
+## **Funcionalidades Principais** 🎯
 
-- **Gestão de Agendamentos**: Sistema completo de agendamentos com opções de reagendamento e cancelamento.
-- **Cadastro de Clientes**: Gerenciamento de informações dos clientes, como dados pessoais e histórico de serviços.
-- **Gestão de Serviços**: Adição, edição e exclusão de serviços oferecidos pela barbearia.
-- **Painel Administrativo**: Interface amigável para visualização de dados como volume de clientes e serviços mais populares.
-- **Notificações**: Lembretes automáticos de compromissos para clientes e barbearia.
-- **Relatórios**: Geração de relatórios para análise de desempenho e tomada de decisões estratégicas.
+### 1. **Agendamento Online** 🗓️
+Permite que os clientes agendem serviços diretamente pela plataforma, escolhendo o barbeiro e o horário de sua preferência de maneira fácil e rápida.
 
-## 🛠 **Tecnologias Utilizadas**
+### 2. **Gestão de Horários - EM BREVE** 🕒
+Os barbeiros podem configurar seus horários de trabalho e gerenciar sua disponibilidade, otimizando a organização da agenda.
 
-- **React**: Utilizado para o desenvolvimento da interface do usuário, garantindo uma experiência fluida e responsiva.
-- **TypeScript**: Para tipagem estática e maior segurança do código.
-- **PostgreSQL**: Banco de dados relacional robusto para armazenar dados de forma eficiente.
-- **Tailwind CSS**: Framework utilitário para criar designs customizados rapidamente.
-- **Next.js**: Para renderização do lado do servidor e geração de páginas estáticas, melhorando a performance e o SEO.
-- **ShadCN**: Ferramenta para construção de componentes de UI complexos integrados com Tailwind CSS.
-- **Node.js**: Utilizado no backend para construir APIs RESTful e manuseio de dados.
+### 3. **Login via Google** 🔑
+Autenticação rápida e segura com **NextAuth**, permitindo que os usuários façam login usando suas contas do Google.
 
----
+### 4. **Notificações Automáticas - EM BREVE** 📲 
+O sistema envia notificações automáticas para os clientes confirmando seus agendamentos e lembrando-os dos compromissos futuros.
 
-soon
+### 5. **Histórico de Agendamentos** 📜
+Os clientes podem visualizar seu histórico de agendamentos e modificar ou cancelar compromissos com facilidade.
+
+### 6. **Tela de Agendamentos** 🖥️
+Exibe todos os compromissos futuros do usuário, com a opção de cancelamento de agendamentos diretamente pela interface.
+
+### 7. **Personalização de Serviços EM BREVE** ✂️
+Os barbeiros podem definir detalhes dos serviços oferecidos, como preço, duração e descrição, para que os clientes saibam exatamente o que estão contratando.
+
+## **Tecnologias Utilizadas** 💻
+
+- **Frontend**: Desenvolvido em **Next.js** (React) para garantir uma aplicação moderna e responsiva.
+- **Estilização**: Utiliza **Tailwind CSS** para uma interface clean e altamente customizável.
+- **Autenticação**: Implementado com **NextAuth** para login seguro via Google.
+- **Banco de Dados**: Integração com banco de dados NoSQL para armazenar informações de usuários, agendamentos e serviços.
+- **Hospedagem**: O sistema está hospedado na **Vercel**, garantindo alta performance e escalabilidade.
+
+## **Acesso ao Sistema** 🔐
+
+O **Barberease** é um projeto fechado. Para obter acesso, entre em contato conosco através do e-mail para **gustavodsroldao@gmail.com**.
+
+## **Deploy e Manutenção** 🚀
+
+A plataforma está hospedada na **Vercel** com deploy contínuo, garantindo que todas as atualizações e melhorias sejam aplicadas automaticamente em produção. A nossa equipe monitora o sistema para garantir alta disponibilidade e estabilidade.
+
+## **Suporte** 🛠️
+
+Para dúvidas ou suporte técnico, entre em contato com nossa equipe pelo e-mail **gustavodsroldao@gmail.com**. Oferecemos suporte dedicado para garantir que o sistema atenda às necessidades da sua barbearia.
