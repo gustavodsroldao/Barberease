@@ -23,6 +23,8 @@ import { DialogContent } from "@radix-ui/react-dialog";
 import SignInDialog from "./sign-in-dialog";
 import { Dialog } from "./ui/dialog";
 import BookingSumary from "./booking-sumary";
+import Router from "next/router";
+import router from "next/router";
 
 interface ServiceItemProps {
   service: BarbershopService;
@@ -142,7 +144,12 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
         date: selectedDate,
       });
       handleBookingSheetOpenChange();
-      toast.success("Reserva criada com sucesso!");
+      toast.success("Reserva criada com sucesso!", {
+        action: {
+          label: "Ver reservas",
+          onClick: () => router.push("/bookings"),
+        },
+      });
     } catch (error) {
       console.error(error);
       toast.error("Erro ao criar reserva!");
